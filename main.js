@@ -52,6 +52,11 @@ var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];  //[1,2,7,4,5,6,3,8,9];
 var challengeTwoInputB = [12,13,14];  //[12,17,14];
 var challengeTwoInputC = [9,2,4,7,3];  //[9,2,4,3,7];
 
+//Turn the userinput into string
+//covert the string into array that contains single digit number
+//loop through each digit
+//join the single digit back to a string
+//spit the new string by comma and save them into result array
 var inputString = challengeTwoInputA.join();
 var convertedNewArray = inputString.split('');
 
