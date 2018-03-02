@@ -74,8 +74,19 @@ for(var i = 0; i < convertedNewArray.length; i++)
 var newString = convertedNewArray.join('');
 var resultArray = newString.split(',');
 
-var domString = '<h>' + resultArray + '</h>';
+var domString = '<h1>' + resultArray + '</h1>';
 document.getElementById('challenge-2').innerHTML = domString;
+
+// -------------------- Challange 3-------------------- //
+var challengeThreeInputA = [ 1, 1, 1, 2, 1, 1 ];  // 2
+var challengeThreeInputB = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];  // 0.55
+
+challengeThreeInputA.sort(function(a,b){return a - b});
+var uniqueNumber = challengeThreeInputA[challengeThreeInputA.length-1];
+var domString = '<h1>' + uniqueNumber + '</h1>';
+document.getElementById('challenge-3').innerHTML = domString;
+
+
 
 
 
