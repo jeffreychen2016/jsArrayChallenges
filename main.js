@@ -1,4 +1,4 @@
-// Challange 1
+// -------------------- Challange 1-------------------- //
 var alphabet = [];
 var allValueArry = [];
 var comparisonArry =[];
@@ -10,7 +10,7 @@ for(var i = 97; i < 123; i++)
 }
 
 var value = 0;
-var userInput = 'cba abc f';
+var userInput = 'jumbo shrimp';
 var userInputArry = userInput.split(' ');
 
 for(var j = 0; j<userInputArry.length;j++)
@@ -46,6 +46,33 @@ for(var key in comparisonArry)
         }
     
 }
+
+// -------------------- Challange 2-------------------- //
+var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];  //[1,2,7,4,5,6,3,8,9];
+var challengeTwoInputB = [12,13,14];  //[12,17,14];
+var challengeTwoInputC = [9,2,4,7,3];  //[9,2,4,3,7];
+
+var inputString = challengeTwoInputA.join();
+var convertedNewArray = inputString.split('');
+
+for(var i = 0; i < convertedNewArray.length; i++)
+{
+    if(convertedNewArray[i] == 3)
+    {
+        convertedNewArray[i] = 7;
+    }
+    else if(convertedNewArray[i] == 7)
+    {
+        convertedNewArray[i] = 3;
+    }
+}
+var newString = convertedNewArray.join('');
+var resultArray = newString.split(',');
+
+var domString = '<h>' + resultArray + '</h>';
+document.getElementById('challenge-2').innerHTML = domString;
+
+
 
 
 
