@@ -113,7 +113,6 @@ for(var i = 0; i < array2.length; i++)
     {
         if(array1[j] === array2[i])
         {
-            console.log(array1[j]);
             array1.splice(j,1);
             j++;
         }
@@ -123,6 +122,39 @@ for(var i = 0; i < array2.length; i++)
 
 var domString = '<h1>' + array1 + '</h1>';
 document.getElementById('challenge-5').innerHTML = domString;
+
+// -------------------- Challange 6-------------------- //
+var test1 = [1,3]; // 2
+var test2 = [2,3,4]; // 1
+var test3 = [13,11,10,3,2,1,4,5,6,9,7,8]; // 12
+
+var highestNumber = test3.length + 1;
+var comparisonArray = [];
+
+//create a array with list of complete numbers
+//check the test array against array created
+for(var i = highestNumber; i >= 1; i--)
+{
+    comparisonArray.push(i);
+}
+
+for(var j = 0; j < test3.length; j++)
+{
+    var k = 0;
+    while(k < comparisonArray.length)
+    {
+        if(comparisonArray[k] === test3[j])
+        {
+            comparisonArray.splice(k,1);
+            k++;
+        }
+        k++;
+    }
+}
+
+var domString = '<h1>' + comparisonArray + '</h1>';
+document.getElementById('challenge-6').innerHTML = domString;
+
 
 
 
