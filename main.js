@@ -98,6 +98,33 @@ for(var i = 0; i < challengeFourInputA.length; i++)
 var domString = '<h1>' + challengeFourInputA + '</h1>';
 document.getElementById('challenge-4').innerHTML = domString;
 
+// -------------------- Challange 5-------------------- //
+var array3 = [1,2];
+var array4 = [1];
+//display = [2]
+var array1 = [1,2, 4, 7, 5, 9];
+var array2 = [5, 9, 2];
+//display = [1, 4, 7]
+
+for(var i = 0; i < array2.length; i++)
+{
+    var j = 0;
+    while(j < array1.length)
+    {
+        if(array1[j] === array2[i])
+        {
+            console.log(array1[j]);
+            array1.splice(j,1);
+            j++;
+        }
+        j++;
+    }
+}
+
+var domString = '<h1>' + array1 + '</h1>';
+document.getElementById('challenge-5').innerHTML = domString;
+
+
 
 
 
