@@ -241,7 +241,17 @@ result = result.join().replace(/,/ig,'');
 var domString = '<h1>' + result + '</h1>';
 document.getElementById('challenge-8').innerHTML = domString;
 
+// -------------------- Challange 9 -------------------- //
+var phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; // => displays "(123) 456-7890"
 
+phoneNumber[0] = '(' + phoneNumber[0];
+phoneNumber[2] = phoneNumber[2] + ') ';
+phoneNumber[5] = phoneNumber[5] + '-';
+
+phoneNumber = phoneNumber.join().replace(/,/ig,'');
+
+var domString = '<h1>' + phoneNumber+ '</h1>';
+document.getElementById('challenge-9').innerHTML = domString;
 
 
 
