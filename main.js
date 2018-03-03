@@ -194,7 +194,7 @@ for(var m = 0; m < array2.length; m++)
     var elementToRemove = offerings.indexOf(array2[m]);
     offerings.splice(elementToRemove,1);
 }
-console.log(offerings);
+
 for(var k = 0; k < offerings.length; k += numBeggers)
 {
     array3.push(offerings[k]); 
@@ -212,7 +212,34 @@ result.push(value1,value2,value3);
 var domString = '<h1>' + result + '</h1>';
 document.getElementById('challenge-7').innerHTML = domString;
 
+// -------------------- Challange 8 -------------------- //
+var test2 = 274; // Display = '2-7-4'
+var test1 = 6815; // Display = '68-1-5'
+var array = test1.toString().split('');
+var result = [];
 
+result.push(array[0]);
+
+for(var i = 1; i < array.length - 1; i++)
+{
+    if(array[i] % 2 > 0)
+    {
+        array[i] = '-' + array[i] + '-';
+        result.push(array[i]);
+    }
+    else
+    {
+        result.push(array[i]);
+    }
+}
+
+result.push(array[array.length-1]);
+
+result = result.join().replace(/,/ig,'');
+
+
+var domString = '<h1>' + result + '</h1>';
+document.getElementById('challenge-8').innerHTML = domString;
 
 
 
