@@ -57,7 +57,7 @@ var challengeTwoInputC = [9,2,4,7,3];  //[9,2,4,3,7];
 //loop through each digit
 //join the single digit back to a string
 //spit the new string by comma and save them into result array
-var inputString = challengeTwoInputA.join();
+var inputString = challengeTwoInputB.join();
 var convertedNewArray = inputString.split('');
 
 for(var i = 0; i < convertedNewArray.length; i++)
@@ -252,6 +252,40 @@ phoneNumber = phoneNumber.join().replace(/,/ig,'');
 
 var domString = '<h1>' + phoneNumber+ '</h1>';
 document.getElementById('challenge-9').innerHTML = domString;
+
+// -------------------- Challange 10 -------------------- //
+/*
+I I I I  # each Pin has a Number:    7 8 9 10    
+ I I I                                4 5 6
+  I I                                  2 3
+   I                                    1
+ I I   I
+  I   I
+   I
+    I
+Removed [3,5,9]
+*/
+var input = [3,5,9];
+var array = [];
+for(var i = 1; i < 11; i++)
+{
+    array.push(i);
+}
+
+for(var k = 0; k < input.length; k++)
+{
+    for(var j = 0; j < array.length; j++)
+    {
+        if(array[j] == input[k])
+        {
+            document.getElementById(j + 1).innerHTML = " ";
+        }    
+    }
+}
+
+
+
+
 
 
 
