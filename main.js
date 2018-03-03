@@ -155,6 +155,64 @@ for(var j = 0; j < test3.length; j++)
 var domString = '<h1>' + comparisonArray + '</h1>';
 document.getElementById('challenge-6').innerHTML = domString;
 
+// -------------------- Challange 7 -------------------- //
+var numBeggers = 3;
+var offerings = [1,2,3,4,5];
+// first one takes [1, 4]=5
+// second one takes [2, 5]=7
+// second one takes [3]=3
+//display [5, 7, 3]
+
+var array1 = [];
+var array2 = [];
+var array3 = [];
+var value1 = 0;
+var value2 = 0;
+var value3 = 0;
+var result = [];
+ 
+for(var i = 0; i < offerings.length; i += numBeggers)
+{
+    array1.push(offerings[i]);
+}
+
+for(var n = 0; n < array1.length; n++)
+{
+    value1 += array1[n];
+    var elementToRemove = offerings.indexOf(array1[n]);
+    offerings.splice(elementToRemove,1);
+}
+
+for(var j = 0; j < offerings.length; j += (numBeggers-1))
+{
+    array2.push(offerings[j]); 
+}
+
+for(var m = 0; m < array2.length; m++)
+{
+    value2 += array2[m];
+    var elementToRemove = offerings.indexOf(array2[m]);
+    offerings.splice(elementToRemove,1);
+}
+console.log(offerings);
+for(var k = 0; k < offerings.length; k += numBeggers)
+{
+    array3.push(offerings[k]); 
+}
+
+for(var p = 0; p < array3.length; p++)
+{
+    value3 += array3[p];
+    var elementToRemove = offerings.indexOf(array3[p]);
+    offerings.splice(elementToRemove,1);
+}
+
+result.push(value1,value2,value3);
+
+var domString = '<h1>' + result + '</h1>';
+document.getElementById('challenge-7').innerHTML = domString;
+
+
 
 
 
